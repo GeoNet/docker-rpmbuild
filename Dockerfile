@@ -10,6 +10,7 @@ RUN yum install -y \
     gcc-c++ \
     make \
     rpm-build \
+    rpmlint \
     tar \
     yum-utils
 
