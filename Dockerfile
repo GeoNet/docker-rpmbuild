@@ -3,13 +3,13 @@ FROM centos:centos7
 USER root
 
 RUN yum install -y \
-    rpm-build \
-    yum-utils \
+    autoconf \
+    automake \
+    createrepo \
     gcc \
     gcc-c++ \
-    automake \
-    autoconf \
     make \
+    rpm-build \
     tar \
-    createrepo
+    yum-utils
 
