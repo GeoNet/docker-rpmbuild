@@ -11,6 +11,7 @@ RUN yum install -y \
     make \
     rpm-build \
     rpmlint \
+    rpmsign \
     tar \
     yum-utils
 
