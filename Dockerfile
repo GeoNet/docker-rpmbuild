@@ -12,5 +12,6 @@ RUN yum install -y \
     rpm-build \
     rpmlint \
     tar \
+    epel-release \    
     yum-utils
 
