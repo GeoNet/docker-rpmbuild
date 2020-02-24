@@ -14,4 +14,5 @@ RUN yum -y update && \
     rpmlint \
     tar \
     epel-release \
-    yum-utils
+    yum-utils && \
+    yum clean all
