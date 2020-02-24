@@ -2,7 +2,8 @@ FROM centos:centos7
 
 USER root
 
-RUN yum -y install \
+RUN yum -y update && \
+    yum -y install \
     autoconf \
     automake \
     createrepo \
