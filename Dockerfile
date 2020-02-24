@@ -2,7 +2,8 @@ FROM centos:centos6
 
 USER root
 
-RUN yum install -y \
+RUN yum -y update && \
+    yum -y install \
     autoconf \
     automake \
     createrepo \
@@ -14,4 +15,3 @@ RUN yum install -y \
     tar \
     epel-release \
     yum-utils
-
