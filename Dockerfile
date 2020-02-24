@@ -14,4 +14,5 @@ RUN yum -y update && \
     rpmlint \
     rpm-sign \
     tar \
-    yum-utils
+    yum-utils && \
+    yum clean all
