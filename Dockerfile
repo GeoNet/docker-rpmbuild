@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM quay.io/geonet/centos:centos7
 
 USER root
 
