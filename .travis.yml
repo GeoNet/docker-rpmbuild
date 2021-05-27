@@ -1,0 +1,24 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+script:
+  - ./build.sh
+
+before_deploy:
+  - docker login --username="geonet+dockerbuild" --password="${docker_password}" quay.io
+
+deploy:
+  provider: script
+  script: ./push.sh
+  on:
+    branch: centos7
+
+env:
+  global:
+    - secure: "fQGyUwaIj/MXx/lDjeFKrlGqwgN/2+xedHHE7Mtiwp6rHLA3f56hgLHGCSktgvt5zehYpjf6eOQ25V7ZSztsAKDUcB0FFq3ee6YTyoHkuj5lYO0Xd5E7RtgQgbrhEA+DqGB7AclVNpfnEUCQGIAXLyy791zz0YYHwZ1OGXyKm5g=" #docker_password
+
+#  vim: set ts=2 sw=2 tw=0 et:
