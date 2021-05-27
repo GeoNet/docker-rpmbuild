@@ -6,16 +6,14 @@ services:
   - docker
 
 script:
-  - ./build.sh
+  - ./build.sh ${TRAVIS_BRANCH}
 
 before_deploy:
   - docker login --username="geonet+dockerbuild" --password="${docker_password}" quay.io
 
 deploy:
   provider: script
-  script: ./push.sh
-  on:
-    branch: centos7
+  script: ./push.sh ${TRAVIS_BRANCH}
 
 env:
   global:

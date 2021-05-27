@@ -9,7 +9,13 @@ error_handler () {
 
 trap error_handler ERR
 
-docker build -t quay.io/geonet/rpmbuild:latest .
+if [ "$#" -ne 1 ]; then
+  echo 'Bad number of arguments...'
+  echo "Usage $0 <branch>  : branch as docker tag"
+  exit 1
+fi
+
+docker build -t quay.io/geonet/rpmbuild:${1} .
 
 exit $errcount
 
