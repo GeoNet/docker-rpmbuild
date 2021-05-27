@@ -13,6 +13,7 @@ RUN yum -y update && \
     rpm-build \
     rpmlint \
     rpm-sign \
+    rpmdevtools \
     tar \
     yum-utils && \
     yum clean all
